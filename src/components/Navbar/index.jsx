@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className={styles.main}>
                 <div className={styles.links}>
                     <div className={styles.logoContainer}>
-                        <img src="./assets/logo.svg" alt="" className={styles.logo} />
+                        <img src="./images/logo.svg" alt="" className={styles.logo} />
                     </div>
 
                     <ul className={styles.list}>
