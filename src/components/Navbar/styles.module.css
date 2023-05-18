@@ -1,0 +1,145 @@
+.container{
+    /* display: flex; */
+    /* justify-content: center; */
+    z-index: 2;
+}
+
+.main{
+    width: 100vw;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 20px 40px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* align-items: center; */
+    /* gap: 50px; */
+}
+
+.logo{
+    height: 100px;
+}
+
+.logoContainer{
+    position: relative;
+}
+
+.logoContainer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.list{
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    align-self: flex-start;
+}
+
+.list a, .verticalList a{
+    text-decoration: none;
+}
+
+.listItem{
+    cursor: pointer;
+    transition: .3s;
+}
+
+.listItem:hover, .listItem.active{
+    color: rgb(219, 118, 241);
+}
+
+.hamburgerMenu{
+    display: none;
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    padding: 30px;
+    background: linear-gradient(to right, rgb(53, 53, 53), black);
+    top: 20px;
+    right: 0;
+    margin: 40px 0;
+    min-width: 180px;
+    z-index: 10;
+    border-radius: 15px;
+}
+
+.verticalList{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 40px;
+    list-style: none;
+    align-self: flex-start;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon{
+    /* width: 20px; */
+    cursor: pointer;
+}
+
+.button{
+width: 100px;
+padding: 10px;
+background-color: rgb(219, 118, 241);
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1200px){
+    .main{
+        padding: 20px 20px 0;
+    }
+
+    .list{
+        gap:50px;
+    }
+}
+
+
+@media screen and (max-width: 1050px){
+    /* .links{
+        justify-content: space-between;
+    } */
+
+    .list{
+        display: none;
+    }
+
+    .hamburgerMenu{
+        display: flex;
+        flex-direction: column;
+    }
+}

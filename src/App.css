@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    color: white;
+  }
+
+.container{
+    height: 100vh;
+    /* background-image: linear-gradient(315deg, #D419C1ff, #C71EBDff, #BB23BAff, #AE28B6ff, #A12DB2ff, #9532AFff, #8837ABff); */
+    /* background-image: linear-gradient(to right top, #3c2562, #46267c, #512798, #5b25b4, #6622d0); */
+    background: #512798;
+    /* background: url("./assets/portfolio homepage pic 2.jpg") no-repeat; */
+    background-size: cover;
+    background-position: center;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,5 @@
+.container{
+    height: 100vh;
+    /* background-image: linear-gradient(315deg, #D419C1ff, #C71EBDff, #BB23BAff, #AE28B6ff, #A12DB2ff, #9532AFff, #8837ABff); */
+    scroll-snap-align: center;
+}

@@ -1,0 +1,341 @@
+.container{
+    height: 100vh;
+    /* background-image: linear-gradient(315deg, #D419C1ff, #C71EBDff, #BB23BAff, #AE28B6ff, #A12DB2ff, #9532AFff, #8837ABff); */
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main{
+    margin: auto;
+    padding: 50px 40px 0;
+    height: 100vh;
+    scroll-snap-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    position: relative;
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d6a7f5;
+    width: 300px;
+    /* transition: 1s; */
+    /* animation: continue 3s ease repeat; */
+}
+
+.title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 3s ease forwards;
+    animation-delay: 3.5s;
+}
+
+.title::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #512798;
+    animation: continue 6s ease forwards infinite;
+    animation-delay: 6s;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    max-width: 60%;
+    /* align-items: center; */
+}
+
+.right{
+    height: 100vh;
+    scroll-snap-align: center;
+    /* width: 35%; */
+    /* display: flex;
+    justify-content: space-between; */
+    /* z-index: 1000; */
+    /* align-self: flex-end; */
+}
+
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px */
+}
+
+.intro h1{
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.intro h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.intro h4{
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(219, 118, 241);
+}
+
+.intro h4::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.intro p{
+    position: relative;
+    font-size: 16px;
+    margin: 25px 0 40px
+}
+
+.intro p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.buttonSection{
+    position: relative;
+    margin: 0
+}
+
+.buttonSection::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.1s;
+    z-index: 2;
+}
+
+.button{
+    position: relative;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    background-color: rgb(219, 118, 241);
+    color: rgb(8, 14, 38);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+button:hover{
+    color:rgb(219, 118, 241)
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #080e26;
+    /* background-color: red; */
+    transition: .5s;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+button:hover::before{
+    width: 100%;
+}
+
+.socIcons{
+    position: absolute;
+    bottom: 80px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socIcons::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.socIcons a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(8, 14, 38);
+    /* background: transparent; */
+    /* border: 2px solid rgb(8, 14, 38); */
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.socIcons a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(219, 118, 241);
+    z-index: -1;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.socIcons a:hover::before{
+    width: 100%;
+}
+
+.bgPicHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    max-width: 40%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+    /* display: none; */
+}
+
+.bgPicHover:hover{
+    background: #512798;
+    opacity: .5;
+}
+
+.bgPicHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #512798;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+.scrollTool{
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
+
+@keyframes continue{
+    0%{
+        width: 0%;
+    }
+
+    50%{
+        width: 100%;
+    }
+
+    100%{
+        width: 0%;
+    }
+
+}
+
+/********** MEDIA QUERIES **********/
+
+@media screen and (max-width: 1050px){
+    .main{
+        width: 100%;
+        padding: 50px 20px 0;
+    }
+
+    .left{
+        max-width: 100%;
+    }
+
+    .bgPicHover, .right{
+        display: none;
+    }
+
+    .scrollTool{
+        bottom: 10px;
+    }
+}
