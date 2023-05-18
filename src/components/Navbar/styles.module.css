@@ -21,11 +21,13 @@
 }
 
 .logo{
+    max-width: 100px;
     height: 100px;
 }
 
 .logoContainer{
     position: relative;
+    max-width: 100px;
 }
 
 .logoContainer::before{

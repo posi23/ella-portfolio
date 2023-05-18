@@ -282,6 +282,7 @@ button:hover::before{
 
 .scrollTool{
     position: absolute;
+    left: 0;
     bottom: 32px;
     width: 100%;
     display: flex;

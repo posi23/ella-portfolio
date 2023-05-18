@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
-import { BiSearchAlt } from 'react-icons/bi'
 import { navLinks } from '../../constants'
 import clsx from 'clsx'
 import { Link } from 'react-router-dom'
-import { close, menu } from '../../assets'
+// import { close, menu } from '../../assets'
+import { ReactComponent as Close } from '../../assets/close.svg'
+import { ReactComponent as Menu } from '../../assets/menu.svg'
+import { ReactComponent as MyLogo } from '../../assets/myLogo.svg'
 
 const Navbar = () => {
 
@@ -16,7 +18,8 @@ const Navbar = () => {
             <div className={styles.main}>
                 <div className={styles.links}>
                     <div className={styles.logoContainer}>
-                        <img src="./images/logo.svg" alt="" className={styles.logo} />
+                        {/* <img src="./logo.svg" alt="" className={styles.logo} /> */}
+                        <MyLogo className={styles.logo} />
                     </div>
 
                     <ul className={styles.list}>
@@ -34,12 +37,24 @@ const Navbar = () => {
                     </ul>
 
                     <div className={styles.hamburgerMenu}>
-                        <img
-                            src={toggle ? close : menu}
+                        {/* <img
+                            src={toggle ? Close : Menu}
                             alt="menu"
                             style={{ width: "30px", height: "30px", cursor: "pointer" }}
                             onClick={() => setToggle(!toggle)}
-                        />
+                        /> */}
+
+                        {toggle ? (
+                            <Close
+                                style={{ width: "30px", height: "30px", cursor: "pointer" }}
+                                onClick={() => setToggle(!toggle)}
+                            />
+                        ) : (
+                            <Menu
+                                style={{ width: "30px", height: "30px", cursor: "pointer" }}
+                                onClick={() => setToggle(!toggle)}
+                            />
+                        )}
 
                         <div style={{ display: toggle ? "flex" : "none" }} className={styles.menu}>
                             <ul className={styles.verticalList}>
