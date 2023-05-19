@@ -10,7 +10,7 @@ import { ReactComponent as MyLogo } from '../../assets/myLogo.svg'
 
 const Navbar = () => {
 
-    const [active, setActive] = useState("home")
+    const [active, setActive] = useState("")
     const [toggle, setToggle] = useState(false)
 
     return (
@@ -18,13 +18,14 @@ const Navbar = () => {
             <div className={styles.main}>
                 <div className={styles.links}>
                     <div className={styles.logoContainer}>
-                        {/* <img src="./logo.svg" alt="" className={styles.logo} /> */}
-                        <MyLogo className={styles.logo} />
+                        <Link to="/" onClick={() => setActive("")}>
+                            <MyLogo className={styles.logo} />
+                        </Link>
                     </div>
 
                     <ul className={styles.list}>
                         {navLinks.map((link) => (
-                            <Link to="/">
+                            <a href={link.id !== "home" ? `#${link.id}` : "/"}>
                                 <li
                                     key={link.id}
                                     className={clsx(styles.listItem, active === link.id ? styles.active : null)}
@@ -32,18 +33,11 @@ const Navbar = () => {
                                 >
                                     {link.title}
                                 </li>
-                            </Link>
+                            </a>
                         ))}
                     </ul>
 
                     <div className={styles.hamburgerMenu}>
-                        {/* <img
-                            src={toggle ? Close : Menu}
-                            alt="menu"
-                            style={{ width: "30px", height: "30px", cursor: "pointer" }}
-                            onClick={() => setToggle(!toggle)}
-                        /> */}
-
                         {toggle ? (
                             <Close
                                 style={{ width: "30px", height: "30px", cursor: "pointer" }}
@@ -59,7 +53,7 @@ const Navbar = () => {
                         <div style={{ display: toggle ? "flex" : "none" }} className={styles.menu}>
                             <ul className={styles.verticalList}>
                                 {navLinks.map((link) => (
-                                    <Link to="/">
+                                    <a href={link.id !== "home" ? `#${link.id}` : "/"}>
                                         <li
                                             key={link.id}
                                             className={clsx(styles.listItem, active === link.id ? styles.active : null)}
@@ -70,7 +64,7 @@ const Navbar = () => {
                                         >
                                             {link.title}
                                         </li>
-                                    </Link>
+                                    </a>
                                 ))}
                             </ul>
                         </div>

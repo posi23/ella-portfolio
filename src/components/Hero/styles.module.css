@@ -4,18 +4,24 @@
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    /* align-items: center; */
+    /* justify-content: space-between; */
 }
 
 .main{
-    margin: auto;
     padding: 50px 40px 0;
-    height: 100vh;
+    /* height: 100vh; */
     scroll-snap-align: center;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.mobileLayout{
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 40px;
 }
 
 .title{
@@ -191,68 +197,13 @@ button:hover::before{
     width: 100%;
 }
 
-.socIcons{
-    position: absolute;
-    bottom: 80px;
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-}
 
-.socIcons::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: #512798;
-    animation: showRight 1s ease forwards;
-    animation-delay: 2.5s;
-    z-index: 2;
-}
-
-.socIcons a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(8, 14, 38);
-    /* background: transparent; */
-    /* border: 2px solid rgb(8, 14, 38); */
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-
-.socIcons a::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgb(219, 118, 241);
-    z-index: -1;
-    border-radius: 50%;
-    transition: .5s;
-}
-
-.socIcons a:hover::before{
-    width: 100%;
-}
 
 .bgPicHover{
     position: absolute;
     top: 0;
     right: 30px;
-    max-width: 40%;
+    width: 40%;
     height: 100%;
     background: transparent;
     transition: 3s;
@@ -264,7 +215,7 @@ button:hover::before{
 
 .bgPicHover:hover{
     background: #512798;
-    opacity: .5;
+    opacity: .8;
 }
 
 .bgPicHover::after{
@@ -288,6 +239,8 @@ button:hover::before{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    z-index: 100;
 }
 
 

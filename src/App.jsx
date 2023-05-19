@@ -1,16 +1,24 @@
 import { About, Contact, Hero, Projects } from "./components"
 import "./App.css"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
   return (
     <BrowserRouter>
       <div className="container">
-        <Hero />
-        {/* <About />
+        {/* <Routes>
+          <Route path="/" element={<Hero />} />
+          <About />
       <Projects />
-      <Contact /> */}
+          <Route path="#contact" element={<Contact />} />
+        </Routes> */}
+
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+
       </div>
     </BrowserRouter>
   )

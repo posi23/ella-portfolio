@@ -16,8 +16,8 @@
     /* background-image: linear-gradient(to right top, #3c2562, #46267c, #512798, #5b25b4, #6622d0); */
     background: #512798;
     /* background: url("./assets/portfolio homepage pic 2.jpg") no-repeat; */
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover;
+    background-position: center; */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: auto;

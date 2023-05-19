@@ -26,16 +26,16 @@ import {
 } from "../assets";
 
 export const navLinks = [
-    {
-        id: "home",
-        title: "Home",
-    },
+    // {
+    //     id: "home",
+    //     title: "Home",
+    // },
     {
         id: "about",
         title: "About",
     },
     {
-        id: "portflio",
+        id: "portfolio",
         title: "Portfolio",
     },
     {

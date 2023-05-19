@@ -1,15 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar'
 import styles from './styles.module.css'
 import { FaLinkedinIn, FaTwitter } from 'react-icons/fa'
-import { ComputersCanvas } from '..'
+import { ComputersCanvas, Contact } from '..'
 import { motion } from 'framer-motion'
+import clsx from 'clsx'
 
 const Hero = () => {
+
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 1050px)")
+        setIsMobile(mediaQuery.matches)
+
+        const handleMediaQueryChange = (e) => {
+            setIsMobile(e.matches)
+        }
+
+        mediaQuery.addEventListener("change", handleMediaQueryChange)
+
+        return () => {
+            mediaQuery.removeEventListener("change", handleMediaQueryChange)
+        }
+
+    }, [])
+
     return (
         <div className={styles.container}>
             <Navbar />
-            <div className={styles.main}>
+            <div className={clsx(styles.main, isMobile ? styles.mobileLayout : "")}>
                 <div className={styles.left}>
                     <div className={styles.title}>Ideate. Explore. Design.</div>
                     <div className={styles.intro}>
@@ -21,18 +41,9 @@ const Hero = () => {
                         <button className={styles.button}>Hire Me</button>
                     </div>
                 </div>
-                <div className={styles.socIcons}>
-                    <a href="https://linkedin.com">
-                        <FaLinkedinIn className={styles.icon} />
-                    </a>
-
-                    <a href="https://linkedin.com">
-                        <FaTwitter className={styles.icon} />
-                    </a>
-                </div>
 
                 {/* <div className={styles.right}> */}
-                <ComputersCanvas style={{ cursor: "pointer" }} />
+                <ComputersCanvas style={{ cursor: "pointer" }} isMobile={isMobile} />
                 {/* </div> */}
 
                 <span className={styles.bgPicHover}>
@@ -48,7 +59,8 @@ const Hero = () => {
                             border: "4px grey solid",
                             justifyContent: "center",
                             alignItems: "start",
-                            padding: "5px"
+                            padding: "5px",
+                            marginTop: isMobile ? "20px" : "0px",
                         }}>
                             <motion.dev
                                 animate={{
@@ -70,6 +82,17 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
+
+            {/* <div className={styles.socIcons}>
+                <a href="https://linkedin.com">
+                    <FaLinkedinIn className={styles.icon} />
+                </a>
+
+                <a href="https://linkedin.com">
+                    <FaTwitter className={styles.icon} />
+                </a>
+            </div> */}
+            {/* <Contact /> */}
 
         </div>
     )
