@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 import CanvasLoader from "../Loader"
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ removeObject, isMobile }) => {
 
   const computer = useGLTF('./graphic_designer/scene.gltf')
   return (
@@ -11,7 +11,7 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={0.3} />
       <spotLight
-        position={[-20, 50, 10]}
+        position={[-50, 50, 10]}
         angle={0.15}
         penumbra={1}
         castShadow
@@ -19,20 +19,20 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 3.7 : 3}
-        position={[-0.2, 0.5, -1.0]}
+        scale={removeObject ? 0 : (isMobile ? 3 : 4)}
+        position={isMobile ? [0, 0, 0] : [3, -0.5, -1.0]}
         rotation={[-0.3, -0.3, 0]}
       />
     </mesh>
   )
 }
 
-const ComputersCanvas = ({ isMobile }) => {
+const ComputersCanvas = ({ removeObject, isMobile }) => {
   return (
     <Canvas
       frameloop='demand'
       shadows
-      camera={{ position: [5, 5, 20], fov: 25 }}
+      camera={{ position: isMobile ? [5, 10, 15] : [5, 10, 20], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -41,7 +41,7 @@ const ComputersCanvas = ({ isMobile }) => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers removeObject={removeObject} isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>

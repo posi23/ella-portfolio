@@ -9,19 +9,29 @@ import clsx from 'clsx'
 const Hero = () => {
 
     const [isMobile, setIsMobile] = useState(false)
+    const [removeObject, setRemoveObject] = useState(false)
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 1050px)")
+        const secondMediaQuery = window.matchMedia("(max-width: 480px)")
+
         setIsMobile(mediaQuery.matches)
+        setRemoveObject(secondMediaQuery.matches)
 
         const handleMediaQueryChange = (e) => {
             setIsMobile(e.matches)
         }
 
+        const handleSecondMediaQueryChange = (e) => {
+            setRemoveObject(e.matches)
+        }
+
         mediaQuery.addEventListener("change", handleMediaQueryChange)
+        secondMediaQuery.addEventListener("change", handleSecondMediaQueryChange)
 
         return () => {
             mediaQuery.removeEventListener("change", handleMediaQueryChange)
+            secondMediaQuery.removeEventListener("change", handleSecondMediaQueryChange)
         }
 
     }, [])
@@ -43,7 +53,7 @@ const Hero = () => {
                 </div>
 
                 {/* <div className={styles.right}> */}
-                <ComputersCanvas style={{ cursor: "pointer" }} isMobile={isMobile} />
+                <ComputersCanvas removeObject={removeObject} isMobile={isMobile} />
                 {/* </div> */}
 
                 <span className={styles.bgPicHover}>

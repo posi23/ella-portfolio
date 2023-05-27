@@ -14,10 +14,12 @@ function App() {
           <Route path="#contact" element={<Contact />} />
         </Routes> */}
 
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
+        <div className="main">
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </div>
 
       </div>
     </BrowserRouter>

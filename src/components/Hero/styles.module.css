@@ -19,7 +19,7 @@
 
 .mobileLayout{
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     gap: 40px;
 }
@@ -44,7 +44,7 @@
     height: 100%;
     background: #512798;
     animation: showRight 3s ease forwards;
-    animation-delay: 3.5s;
+    animation-delay: 3s;
 }
 
 .title::after{
@@ -199,7 +199,7 @@ button:hover::before{
 
 
 
-.bgPicHover{
+/* .bgPicHover{
     position: absolute;
     top: 0;
     right: 30px;
@@ -210,24 +210,24 @@ button:hover::before{
     animation: manipActiveHover .1s forwards;
     animation-delay: 4s;
     pointer-events: none;
-    /* display: none; */
-}
+    display: none;
+} */
 
-.bgPicHover:hover{
+/* .bgPicHover:hover{
     background: #512798;
     opacity: .8;
-}
+} */
 
-.bgPicHover::after{
-    content: '';
+.bgPicHover{
+    /* content: ''; */
     position: absolute;
     top: 0;
-    right: 0;
-    width: 120%;
+    right: 0px;
+    width: 50%;
     height: 100%;
     background: #512798;
     animation: showRight 1.5s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
     z-index: 100;
 }
 
@@ -291,5 +291,21 @@ button:hover::before{
 
     .scrollTool{
         bottom: 10px;
+    }
+
+    .intro h1{
+        font-size: 35px;
+    }
+
+    .intro h4{
+        font-size: 20px;
+    }
+
+    .intro p{
+        font-size: 12px;
+    }
+
+    .title{
+        font-size: 16px;
     }
 }
