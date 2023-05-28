@@ -10,8 +10,6 @@
 
 .main{
     padding: 50px 40px 0;
-    /* height: 100vh; */
-    scroll-snap-align: center;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -19,7 +17,6 @@
 
 .mobileLayout{
     flex-direction: column;
-    scroll-snap-align: center;
     align-items: center;
     justify-content: center;
     gap: 40px;
