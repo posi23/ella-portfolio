@@ -7,13 +7,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        {/* <Routes>
-          <Route path="/" element={<Hero />} />
-          <About />
-      <Projects />
-          <Route path="#contact" element={<Contact />} />
-        </Routes> */}
-
         <div className="main">
           <Hero />
           <About />
