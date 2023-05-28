@@ -19,6 +19,7 @@
 
 .mobileLayout{
     flex-direction: column;
+    scroll-snap-align: center;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -274,6 +275,12 @@ button:hover::before{
 }
 
 /********** MEDIA QUERIES **********/
+
+@media screen and (max-width: 450px){
+    .container{
+        height: 100vh;
+    }
+}
 
 @media screen and (max-width: 1050px){
     .main{

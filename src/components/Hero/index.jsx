@@ -13,7 +13,7 @@ const Hero = () => {
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 1050px)")
-        const secondMediaQuery = window.matchMedia("(max-width: 480px)")
+        const secondMediaQuery = window.matchMedia("(max-width: 4500px)")
 
         setIsMobile(mediaQuery.matches)
         setRemoveObject(secondMediaQuery.matches)
@@ -53,13 +53,13 @@ const Hero = () => {
                 </div>
 
                 {/* <div className={styles.right}> */}
-                <ComputersCanvas removeObject={removeObject} isMobile={isMobile} />
+                {<ComputersCanvas removeObject={removeObject} isMobile={isMobile} />}
                 {/* </div> */}
 
                 <span className={styles.bgPicHover}>
                 </span>
 
-                <div className={styles.scrollTool}>
+                {!removeObject && <div className={styles.scrollTool}>
                     <a href="#about">
                         <div style={{
                             display: "flex",
@@ -90,7 +90,7 @@ const Hero = () => {
                             />
                         </div>
                     </a>
-                </div>
+                </div>}
             </div>
 
             {/* <div className={styles.socIcons}>

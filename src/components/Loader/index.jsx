@@ -7,16 +7,16 @@ const Loader = () => {
 
   return (
     <Html>
-      <span></span>
+      {/* <span></span> */}
       <p
         style={{
           fontSize: 14,
           color: "#f1f1f1",
           fontWeight: "bold",
-          marginTop: "50px",
+          margin: "0px",
         }}
       >
-        {progress.toFixed(2)}%
+        {/* {progress.toFixed(2)}% */}
       </p>
     </Html>
   )
