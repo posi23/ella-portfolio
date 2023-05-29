@@ -17,7 +17,7 @@
 
 .mobileLayout{
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     gap: 40px;
 }
@@ -61,7 +61,7 @@
     display: flex;
     flex-direction: column;
     /* gap: 20px; */
-    max-width: 60%;
+    width: 90%;
     /* align-items: center; */
 }
 
@@ -80,6 +80,7 @@
 .intro{
     display: flex;
     flex-direction: column;
+    width: 100%;
     /* gap: 5px */
 }
 
@@ -298,11 +299,11 @@ button:hover::before{
     }
 
     .intro h1{
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .intro h4{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .intro p{
@@ -310,6 +311,6 @@ button:hover::before{
     }
 
     .title{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
