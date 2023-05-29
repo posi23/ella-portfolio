@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar'
 import styles from './styles.module.css'
-import { FaLinkedinIn, FaTwitter } from 'react-icons/fa'
-import { ComputersCanvas, Contact } from '..'
+import { ComputersCanvas } from '..'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
@@ -44,8 +43,8 @@ const Hero = () => {
                     <div className={styles.title}>Ideate. Explore. Design.</div>
                     <div className={styles.intro}>
                         <h1>Hi, I'm <span style={{ color: "#d6a7f5" }}>Emmanuella Aliu</span></h1>
-                        <h4>Graphic / 3D Designer. Artist. Animator.</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a deleniti cumque quisquam dolorem laboriosam maxime cupiditate omnis ea ad numquam, mollitia quis tenetur libero accusamus incidunt optio harum! Laborum.</p>
+                        <h4>Graphic Designer. 3D Animator. Artist. Editor.</h4>
+                        <p>I am a skilled graphic / 3d designer with a passion for creating beautiful, clean, and intuitive designs.</p>
                     </div>
                     <div className={styles.buttonSection}>
                         <button className={styles.button}>Hire Me</button>
@@ -72,7 +71,7 @@ const Hero = () => {
                             padding: "5px",
                             marginTop: isMobile ? "20px" : "0px",
                         }}>
-                            <motion.dev
+                            <motion.div
                                 animate={{
                                     y: [0, 24, 0],
                                 }}

@@ -1,0 +1,13 @@
+.sectionWrapper{
+    max-width: 2816px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    padding: 64px 64px
+}
+
+@media screen and (max-width: 640px){
+    .sectionWrapper{
+        padding: 40px 24px;
+    }
+}
