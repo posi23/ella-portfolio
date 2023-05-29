@@ -44,7 +44,7 @@ const Hero = () => {
                     <div className={styles.intro}>
                         <h1>Hi, I'm <span style={{ color: "#d6a7f5" }}>Emmanuella Aliu</span></h1>
                         <h4>Graphic Designer. 3D Animator. Artist. Editor.</h4>
-                        <p>I am a skilled graphic / 3d designer with a passion for creating beautiful, clean, and intuitive designs.</p>
+                        <p>I am a skilled Graphic / 3D designer with a passion for creating beautiful, clean, and intuitive designs.</p>
                     </div>
                     <div className={styles.buttonSection}>
                         <button className={styles.button}>Hire Me</button>

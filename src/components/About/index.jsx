@@ -18,7 +18,7 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className={styles.description}
             >
-                I am a skilled graphic / 3d designer with a passion for creating beautiful, clean, and intuitive designs. I have a strong eye for visual composition and a deep understanding of the principles of design. I have expertise in Adobe Photoshop, Illustrator, After Effects, and Premier Pro. I am also skilled in 3D modeling and animation using Blender.
+                I am a skilled Graphic / 3D designer with a passion for creating beautiful, clean, and intuitive designs. I have a strong eye for visual composition and a deep understanding of the principles of design. I have expertise in Adobe Photoshop, Illustrator, After Effects, and Premier Pro. I am also skilled in 3D modeling and animation using Blender.
                 I am a highly motivated individual seeking to contribute my skills to your company and grow my experience in the field of graphic design.
             </motion.p>
 
