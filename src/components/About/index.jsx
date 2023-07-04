@@ -42,8 +42,6 @@ const RoleCard = ({ index, title, icon }) => {
                     padding: "2px",
                     borderRadius: "20px",
                     boxShadow: "0px 35px 120px -15px #211e35",
-                    background: "#360033",
-                    background: "-webkit-linear-gradient(to right, #fbd3e9, #bb377d)",
                     background: "linear-gradient(to right, #fbd3e9, #bb377d)",
                 }}
             >

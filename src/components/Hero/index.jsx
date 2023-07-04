@@ -12,7 +12,7 @@ const Hero = () => {
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 1050px)")
-        const secondMediaQuery = window.matchMedia("(max-width: 4500px)")
+        const secondMediaQuery = window.matchMedia("(max-width: 500px)")
 
         setIsMobile(mediaQuery.matches)
         setRemoveObject(secondMediaQuery.matches)
