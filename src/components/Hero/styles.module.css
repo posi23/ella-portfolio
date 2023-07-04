@@ -4,6 +4,7 @@
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
+    /* padding-top: 50px; */
     /* align-items: center; */
     /* justify-content: space-between; */
 }
@@ -233,7 +234,7 @@ button:hover::before{
 .scrollTool{
     position: absolute;
     left: 0;
-    bottom: 32px;
+    bottom: 80px;
     width: 100%;
     display: flex;
     justify-content: center;

@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 import { ComputersCanvas } from '..'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
+import SectionWrapper from '../../hoc'
 
 const Hero = () => {
 
@@ -91,20 +92,8 @@ const Hero = () => {
                     </a>
                 </div>}
             </div>
-
-            {/* <div className={styles.socIcons}>
-                <a href="https://linkedin.com">
-                    <FaLinkedinIn className={styles.icon} />
-                </a>
-
-                <a href="https://linkedin.com">
-                    <FaTwitter className={styles.icon} />
-                </a>
-            </div> */}
-            {/* <Contact /> */}
-
         </div>
     )
 }
 
-export default Hero
+export default SectionWrapper(Hero, "hero")
