@@ -30,7 +30,7 @@ const Contact = () => {
                 <EachContact
                     index={2}
                     Icon={FaPhone}
-                    href="tel:3062619728"
+                    href="tel:4034700922"
                     onHover={true}
                 />
             </div>
@@ -45,7 +45,7 @@ const EachContact = ({ index, Icon, href, onHover = false }) => {
     const Empty = () => <></>
 
     const whenHover = () => {
-        setToDisplay("306-261-9728")
+        setToDisplay("403-470-0922")
         setIconToDisplay(() => Empty)
     }
 

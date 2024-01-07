@@ -30,6 +30,19 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import turningHeads from "./projects/0001-0250.mp4";
+import stopMotion from "./projects/ella's anim proj.mp4"
+// import flowerEdit from "./projects/Aliu_Emmanuella_projectone_01.jpg"
+// import fruitEdit2 from "./projects/Aliu_Emmanuella_projectone_02.jpg"
+// import fruits from "./projects/fruits.jpg"
+// import flower from "./projects/flower.jpg"
+
+const projects = [
+  { project: turningHeads, title: "Turning Head Fountain", type: "video", textDesc: "A school project where I developed a 3D fountain but with a twist, instead of water, it's head. I used Blender to create, develop and render the 3D model." },
+  { project: stopMotion, title: "Life is a Movie", type: "video", textDesc: "A school project where I developed a stop motion video. I put together different pictures to create a illusion of an animated video." },
+  // { project: [flowerEdit, flower], title: "Fruit/Flower Swap 1", type: "multiple", textDesc: "A school project where I demonstrated my photoshop skills.\nI used Adobe Photoshop to create a fruit/flower swap by photoshopping out a rose from a flower and photoshopping it unto a pile of fruits, as well as photoshopping out an apple from a pile of fruits unto a flower. I used different lighting properties to adjust shadow and lightning to make it look like they are original photos.\nSEE FRUIT/FLOWER SWAP 2" },
+]
+
 export {
   myLogo,
   backend,
@@ -59,4 +72,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  projects,
 };
