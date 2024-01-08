@@ -6,6 +6,7 @@ import SectionWrapper from '../../hoc'
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from "../../utils/motion"
+import TopScroll from '../TopScroll'
 
 const Contact = () => {
     return (

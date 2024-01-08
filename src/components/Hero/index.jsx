@@ -48,7 +48,9 @@ const Hero = () => {
                         <p>I am a skilled Graphic / 3D designer with a passion for creating beautiful, clean, and intuitive designs.</p>
                     </div>
                     <div className={styles.buttonSection}>
-                        <button className={styles.button}>Hire Me</button>
+                        <a href="#contact">
+                            <button className={styles.button}>Hire Me</button>
+                        </a>
                     </div>
                 </div>
 

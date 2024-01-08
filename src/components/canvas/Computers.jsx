@@ -32,7 +32,7 @@ const ComputersCanvas = ({ removeObject, isMobile }) => {
     <Canvas
       frameloop='demand'
       shadows
-      camera={{ position: isMobile ? [5, 10, 10] : [5, 10, 20], fov: 25 }}
+      camera={{ position: isMobile ? [5, -20, 10] : [5, 10, 20], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

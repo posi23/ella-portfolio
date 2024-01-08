@@ -1,0 +1,25 @@
+.topScroll {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.topScrollShow {
+    opacity: 1;
+}
+
+.topScrollIcon {
+    color: #fff;
+    font-size: 20px;
+}

@@ -93,13 +93,17 @@
 
 @media screen and (max-width: 755px){
     .container{
-        height: 200vh;
-        scroll-snap-align: start;
+        height: 100vh;
+        /* scroll-snap-align: start; */
     }
 
     .cardContainer{
-        width: 50%;
-        flex-direction: column;
+        /* width: 5%; */
+        flex-direction: row;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        gap: 30px;
     }
 
     .description{
