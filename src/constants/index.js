@@ -53,10 +53,10 @@ const services = [
         title: "3D Modeler",
         icon: mobile,
     },
-    {
-        title: "UI/UX Designer",
-        icon: backend,
-    },
+    // {
+    //     title: "UI/UX Designer",
+    //     icon: backend,
+    // },
     {
         title: "Photo / Video Editor",
         icon: creator,

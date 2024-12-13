@@ -32,19 +32,3 @@
     /* max-width: 1440px; */
     margin: 0 auto;
 }
-
-/* .scrollTop{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to right, #000000, #666666);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .5s;
-    z-index: 100;
-} */
