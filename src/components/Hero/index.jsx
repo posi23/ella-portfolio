@@ -10,10 +10,12 @@ const Hero = () => {
 
     const [isMobile, setIsMobile] = useState(false)
     const [removeObject, setRemoveObject] = useState(false)
+    // const []
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 1050px)")
+        const mediaQuery = window.matchMedia("(max-width: 1350px)")
         const secondMediaQuery = window.matchMedia("(max-width: 500px)")
+        const heroPageQuery = window.matchMedia("(max-width: 1350px)")
 
         setIsMobile(mediaQuery.matches)
         setRemoveObject(secondMediaQuery.matches)

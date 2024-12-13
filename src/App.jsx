@@ -1,17 +1,20 @@
 import { About, Contact, Hero, Projects, TopScroll } from "./components"
+import { useRef } from "react";
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
+
+  const ref = useRef(null);
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="container" ref={ref}>
         <div className="main">
           <Hero />
           <About />
           <Projects />
           <Contact />
-          {/* <div className="scrollTop"></div> */}
+          <TopScroll containerRef={ref} />
 
         </div>
 
